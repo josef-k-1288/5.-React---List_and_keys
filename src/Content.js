@@ -45,7 +45,8 @@ const Content = () => {
             {items.length ? (
                 <ul>
                     {items.map((item) => (
-                        <li className="item" key={item.id}>
+                        // Keys pomažu da identifikuje koje su stavke promenjene, dodate ili uklonjene. Elementima unutar niza treba dati ključeve kako bi se elementima dao stabilan identitet:
+                        <li className="item" key={item.id}> 
                             <input
                                 type="checkbox"
                                 onChange={() => handleCheck(item.id)}
